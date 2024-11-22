@@ -1,0 +1,36 @@
+# This is Git's per-user configuration file.
+[user]
+        name = koyapig
+        email = *******
+# Please adapt and uncomment the following lines:
+#       name = Masashi Koyasu
+#       email = mkoyasu@MasashinoMacBook-puro.local
+
+# [http]
+#   proxy=socks5://127.0.0.1:8888
+# [https]
+#   proxy=socks5://127.0.0.1:8888
+[usre]
+        name = koyapig
+
+[alias]
+       # short
+       b  = branch
+       ba = branch -a
+       c  = commit
+       cv = commit -v
+       co = checkout
+       coo= checkout origin/master
+       di = diff
+       dc = diff --cached
+       f  = fetch --prune
+       st = status
+       sw = switch
+       swo= switch -d origin/master
+       # alias
+       cancel = reset --soft HEAD^
+       save   = stash save
+       load   = stash pop
+       # options
+       alias  = !git config --get-regexp 'alias\\.' | sed 's/alias\\.\\([^ ]*\\) \\(.*\\)/\\1\\\t => \\2/' | sort
+       plog   = log --pretty=format:'%C(yellow)%h %C(green)%cd %C(reset)%s %C(red)%d %C(cyan)[%an]' --date=format:'%t%Y/%m/%d %H:%M'  --all --graph
